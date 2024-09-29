@@ -6,7 +6,7 @@ body {
 }
 
 .styled-heading {
-    font-size: 64px; /* Large font size */
+    font-size: 6vw; /* Responsive font size */
     font-family: 'Arial', sans-serif; /* Choose a modern sans-serif font */
     text-align: center; /* Center the text horizontally */
     background-image: linear-gradient(to right, #32e565, #1a1818); /* Gradient from blue to green */
@@ -15,6 +15,7 @@ body {
     color: transparent;
     margin-top: 80px; /* Add some top margin to push it below the navbar */
     padding: 20px 0; /* Add some padding for better spacing */
+    align-items: center;
 }
 
 .subheading {
@@ -25,15 +26,15 @@ body {
     margin-left: 10%;
 }
 .logo {
-    max-height: 50px; /* Adjust this value as needed */
-    width: auto;
-    display: flex;
-    justify-content: center;
+    max-width: 80%; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Changed from flex to block */
+    margin: 0 auto; /* Center the logo */
+    padding-top: 5%; /* Reduced padding */
     align-items: center;
-    width: 100%;
-    padding-top: 10%;
-
+    justify-content: center;
 }
+
 nav {
     display: flex;
     align-items: center;
@@ -47,7 +48,19 @@ nav {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .styled-heading {
+        font-size: 8vw; /* Slightly larger font size for mobile */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        width: 90%;
+        padding-top: 10%;
+    }
 }
+
 .about-us {
     color: #32e565;
     margin-left: 10%;
@@ -61,8 +74,10 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px; /* Adjust as needed */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    height: 60px; /* Fixed height for consistency */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
 }
 
 .navbar ul {
@@ -73,14 +88,59 @@ nav {
     justify-content: flex-start;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 .navbar li {
-    margin: 0 15px;
+    margin: 0 20px; /* Fixed margin for consistency */
 }
 
 .navbar a {
     text-decoration: none;
-    color: #333; /* Adjust color as needed */
+    color: #333;
     font-weight: bold;
+    font-size: 16px; /* Base font size */
 }
+
+.logo-container {
+    width: 80%;
+    max-width: 600px; /* Adjust this value as needed */
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.logo-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        height: 50px; /* Slightly smaller for mobile */
+    }
+
+    .navbar ul {
+        justify-content: center; /* Center items on mobile */
+    }
+
+    .navbar li {
+        margin: 0 15px; /* Slightly reduced margin for mobile */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Slightly smaller font size for mobile */
+    }
+
+    body {
+        padding-top: 50px; /* Match the mobile navbar height */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar a {
+        font-size: 18px; /* Slightly larger font size for larger screens */
+    }
+}
+
+// ... rest of your existing CSS ...
