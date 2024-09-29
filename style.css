@@ -1,78 +1,86 @@
-* {
-  background-color: #131111;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-font-family: 'Kumbh Sans', sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222324; /* Light grey background */
+    padding-top: 60px; /* Should match the height of the navbar */
 }
+
+.styled-heading {
+    font-size: 64px; /* Large font size */
+    font-family: 'Arial', sans-serif; /* Choose a modern sans-serif font */
+    text-align: center; /* Center the text horizontally */
+    background-image: linear-gradient(to right, #32e565, #1a1818); /* Gradient from blue to green */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-top: 80px; /* Add some top margin to push it below the navbar */
+    padding: 20px 0; /* Add some padding for better spacing */
+}
+
+.subheading {
+    font-size: 24px; /* Subheading font size */
+    font-family: 'Arial', sans-serif; /* Choose a modern sans-serif font */
+    text-align: left 10%; /* Center the text horizontally */
+    color: #32e565; /* Green color */
+    margin-left: 10%;
+}
+.logo {
+    max-height: 50px; /* Adjust this value as needed */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 10%;
+
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* ... rest of your existing CSS ... */
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.about-us {
+    color: #32e565;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
 .navbar {
-background: #decfcf;
-height: 80px;
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 1.2rem;
-position: sticky;
-top: 0;
-z-index: 999;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px; /* Adjust as needed */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
 }
 
-.navbar__container {
-display: flex;
-justify-content: space-between;
-height: 80px;
-z-index: 1;
-width: 100%;
-max-width: 1300px;
-margin: 0 auto;
-padding: 0 50px;
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
 }
 
-#navbar__logo {
-background-color: #ff8187;
-background-image: linear-gradient(to top, #ff0844 0%, #ffb1 100%);
-background-size: 100%;
--webkit-background-clip: text;
--moz-background-clip: text;
--webkit-text-fill-color: transparent;
--moz-text-fill-color: transparent;
-display: flex;
-align-items: center;
-cursor: pointer;
-text-decoration: none;
-font-size: 2rem;
+.navbar li {
+    margin: 0 15px;
 }
 
-.fa-gem {
-margin-right: 0.5rem;
+.navbar a {
+    text-decoration: none;
+    color: #333; /* Adjust color as needed */
+    font-weight: bold;
 }
-
-.navbar__menu {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  text-align: center;
-}
-
-.navbar__item {
-height: 80px;
-}
-
-.navbar__links {
-  color: #e6e6e6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-}
-
-/* Undertext */
-.navbar__links:hover {
-  color: #ff8187;
-  transition: all 0.3s ease;
-  /* change size to slight increase when hovered over */
-  transform: scale(1.05);
-} 
-
