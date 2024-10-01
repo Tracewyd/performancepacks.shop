@@ -65,6 +65,14 @@ nav {
 
 
 
+.about-us h2 {
+    font-size: 24px; /* Default size for larger screens */
+}
+
+.about-us p {
+    font-size: 18px; /* Default size for larger screens */
+}
+
 .navbar {
 
 
@@ -178,17 +186,19 @@ nav {
 .founders-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 50px;
-    margin-left: 10%;
     gap: 20px;
 }
 
 .founder-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     margin-top: 30px;
+    width: 100%;
+    max-width: 600
 }
 
 .founders-section img {
@@ -212,6 +222,118 @@ nav {
     font-size: 2em;
     margin-top: 40px;
     margin-bottom: 20px;
+}
+
+.sr-root {
+    color: #ffffff;
+}
+
+.sr-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sr-header {
+    margin-bottom: 20px;
+}
+
+.sr-payment-summary, .sr-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #32e565;
+    color: #222324;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #28b850;
+}
+
+.buy-section {
+    background-color: #aaaaaa;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    margin-top: auto;
+}
+
+.buy-section h2 {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+.buy-button:hover {
+    background-color: #1c591f;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 60px); /* Adjust based on your header height */
+    padding: 20px 0;
+}
+
+.logo-container {
+    margin-bottom: auto;
+}
+
+.buy-section {
+    background-color: #aaaaaa;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    margin-top: auto;
+}
+
+.buy-section h2 {
+    color: #333;
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+.buy-button:hover {
+    background-color: #1c591f;
 }
 
 
