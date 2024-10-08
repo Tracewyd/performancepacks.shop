@@ -74,20 +74,16 @@ nav {
 }
 
 .navbar {
-
-
-
-
-
-    background-color:  	#aaaaaa;
-    position: fixed;
-    top: 0;
+    background-color: #aaaaaa; /* Background color */
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Align to the top */
     left: 0;
     right: 0;
     height: 60px; /* Fixed height for consistency */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for depth */
     display: flex;
     align-items: center;
+    z-index: 1000; /* Higher z-index to ensure it appears above other content */
 }
 
 .navbar ul {
@@ -107,21 +103,27 @@ nav {
 
 .navbar a {
     text-decoration: none;
-    color: #333;
-    font-weight: 400; /* Changed from bold to 400 for normal state */
+    color: #333; /* Default text color */
+    font-weight: 400; /* Normal font weight */
     font-size: 16px; /* Base font size */
-    transition: color 0.3s, transform 0.3s, font-weight 0.3s, background-color 0.3s; /* Add smooth transition */
-    padding: 5px 10px; /* Add some padding for better hover/active area */
+    transition: color 0.3s, transform 0.3s, font-weight 0.3s; /* Smooth transition */
+    padding: 5px 10px; /* Padding for better hover/active area */
     border-radius: 5px; /* Rounded corners for the highlight */
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: #32e565; /* Green color on hover and for active page */
-    transform: scale(1.1); /* Slightly enlarge on hover and for active page */
-    font-weight: 900; /* Increased font weight */
-    background-color: rgba(50, 229, 101, 0.1); /* Light green background for active page */
+.navbar a:hover {
+    color: #32e565; /* Green color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    font-weight: 700; /* Increased font weight on hover */
 }
+
+.navbar a.active {
+    color: #32e565; /* Green color for active page */
+    font-weight: 400; /* Normal font weight for active page */
+    background-color: transparent; /* No background for active state */
+    transform: none; /* No scaling for active state */
+}
+
 
 .navbar a.active {
     background-color: rgba(50, 229, 101, 0.1); /* Light green background for active page */
@@ -337,5 +339,56 @@ main {
 }
 
 
+/* Add this to your style.css file */
 
+/* Style for the products section */
+.products-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: transparent; /* Set background to transparent */
+}
+
+/* Style for individual product items */
+.product {
+    border: 1px solid #ddd; /* Light border around products */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px; /* Increased margin for spacing */
+    padding: 20px; /* Increased padding for better spacing */
+    width: 250px; /* Increased width for larger product cards */
+    text-align: center; /* Center text */
+    background-color: transparent; /* Set background to transparent */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.product:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Style for product images */
+.product-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Style for product titles */
+.product h3 {
+    font-size: 1.2em; /* Larger font for titles */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Style for product descriptions */
+.product p {
+    font-size: 0.9em; /* Smaller font for descriptions */
+    color: #666; /* Gray color for text */
+}
+
+.product h3 {
+    font-size: 1.2em; /* Larger font for titles */
+    margin: 10px 0; /* Margin for spacing */
+    color: #32e565; /* Change text color to green */
+}
 
