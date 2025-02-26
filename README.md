@@ -1,1 +1,1 @@
-A basic website more about learning basics web development less about the product itself
+School Project extremely basic website more about learning basics web development less about the product itself
